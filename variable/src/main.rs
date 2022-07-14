@@ -82,8 +82,13 @@ fn main() {
      * copy adalah meng-copy hak milik atau ownership dan valuenya dari satu variable ke variable lain
      * atau ketika suatu variable di-passing ke argumen function.
      * 
-     * moved berlaku ke variable NON-PRIMITIVE
-     * copy berlaku ke variable PRIMITIVE
+     * MOVED berlaku ke variable NON-PRIMITIVE
+     * COPY berlaku ke variable PRIMITIVE (int, float, char, array, tuple)
+     * NOTE: 
+     *     1. COPY tidak berlaku lagi untuk TUPLE dan ARRAY apabila valuenya mengandung tipe data NON-PRIMITIVE
+     *        EXAMPLE
+     *        MOVED = [String::from("lorem")], (String::from("lorem"))
+     *        COPY = [1], (1)
      * 
      * __MOVED BEHAVIOR NON PRIMITIVE VARIABLE__
      * __DONT__
@@ -95,5 +100,5 @@ fn main() {
      * let x = String::from("hello");
      * let y = &x;
      * println!("{} {}", x, y);
-    */   
+    */ 
 }
