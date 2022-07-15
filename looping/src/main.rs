@@ -1,5 +1,3 @@
-#[warn(dead_code)]
-
 fn main() {
     loop_keyword(20);
     labelled_loop();
